@@ -10,3 +10,6 @@ while inputline != "":
             outputDict[s] = 1
     inputline = infile.readline()
 print(outputDict)
+outfile = open('output.txt', 'w')
+outfile.write(str(outputDict))
+outfile.close()
