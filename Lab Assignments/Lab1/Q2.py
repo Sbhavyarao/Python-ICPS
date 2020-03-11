@@ -1,15 +1,14 @@
 import operator
 
 
-def concatenateDic(di1, di2):
-    di2.update(di1)
-    sorted_d = sorted(di2.items(), key=operator.itemgetter(1), reverse=True)
-    print(sorted_d)
-    #print(sorted(di2.items(), key=lambda k (k[1], k[0])))
+def Merge(dist1, dist2):
+    return {**dist1, **dist2}   # Merging two dictionaries by using '**kwargs'
 
 
-if __name__ == '__main__':
-    di1 = dict({'Bhavya': 25, 'Ravi': 22, 'Mani': 26, 'Jhon': 20})
-    di2 = {'a': 27, 'b': 24, 'M': 29, 'J': 19}
-    sorted_dict = {}
-    concatenateDic(di1, di2)
+Dist1 = {"Mani": 92, "Nani": 85, "pane": 78, "hhr": 65}
+Dist2 = {'d': 45, 'r': 67, 'y': 56, 'T': 87, 'h': 34}
+Dist3 = Merge(Dist1, Dist2)
+print("Merged Dictionary: ", Dist3)
+sorted_d = sorted(Dist3.items(), key=operator.itemgetter(1))  # sorting dictionary by using sorted method
+Dist4 = dict(sorted_d)
+print("Sorted Dictionary: ", Dist4)

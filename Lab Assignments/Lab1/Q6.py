@@ -27,7 +27,7 @@ plt.xlabel('Number of Clusters')
 plt.ylabel('Wcss')
 plt.show()
 
-k = 3
+k = 2
 km = KMeans(n_clusters=k)
 y = kmeans.predict(x)
 score = metrics.silhouette_score(x, y)
