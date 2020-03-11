@@ -44,7 +44,6 @@ Y_pred = KNN.predict(X_test)
 accuracy = round(KNN.score(X_train, Y_train) * 100, 2)
 print("Using KNN accuracy is :",accuracy)
 
-
 #SVM
 from sklearn.svm import SVC
 svm = SVC()
